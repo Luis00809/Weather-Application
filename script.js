@@ -16,6 +16,9 @@ let forecastTemp = $('.temp');
 let forecastWind = $('.wind');
 let forecastHumidity = $('.humidity');
 
+let lastCity = localStorage.getItem('cityHistory')
+
+let historyList = $('.history');
 
     // need to take userinput and concatinate it into the url so that location in the url is equal to user input
     // once it location equal userinput then we parse the coordiantes (lan and long) into separate variables
@@ -23,22 +26,21 @@ let forecastHumidity = $('.humidity');
 
 
 button.on("click", function(event){
-    console.log('hello')
-    let searchButton = event.target
-    let div = $(button).parent();
-    let input = div.find('input');
-    let userCity = input.val();
+    let userCity = $('#city').val();
+    localStorage.setItem('cityHistory', userCity);
+   
+    let listEl = $('<li>');
+    listEl.text(userCity);
+    historyList.append(listEl);
+
     
+
     let geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + userCity + '&limit=1&appid=1676eb10cf8e7b54d30c52535ce74dbd'
     console.log(geoUrl);
 
 
 
     function addForecast(forecast) {
-        // create from top to bottom and then append from top to bottom
-        // 1st div appends to div class = card-group
-        // then next div appends to div with card
-        // rest of element append to above div in that order
         let grandparentdiv = $('#grandparentForForecast')
         forecast.forEach(function(day) {
             let parentDiv = $('<div>').addClass('card bg-primary');
@@ -103,8 +105,8 @@ button.on("click", function(event){
             
     
         })
-
     };
 
     })
+        
 })
