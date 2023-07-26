@@ -4,3 +4,14 @@
     box-sizing: border-box;
 }
 
+.history {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
