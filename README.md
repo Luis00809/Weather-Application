@@ -9,7 +9,7 @@ N/A
 
 ## Usage
 The weather application was created to check the weather and 5-day forecast. A user can use it once they are curious of the weather and want the 5-day forecast. The user simply has to input a city and then the forecast will appear. 
-The weather app can be found at: 
+The weather app can be found at: https://luis00809.github.io/Weather-Application/
 
 Here is a preview of the application: ![Weather-Application-preview](./assets/images/Screenshot%202023-07-26%20at%2010.53.19%20PM.png)
 
