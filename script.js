@@ -1,7 +1,7 @@
 let userInput = $('#city');
 let button = $('#search');
 
-let requestUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=1676eb10cf8e7b54d30c52535ce74dbd'
+let requestUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=1676eb10cf8e7b54d30c52535ce74dbd'
 let cityName = $('#city-name');
 
 let divForCurrentW = $('.current-weather');
@@ -52,7 +52,7 @@ let weatherIconURL = 'https://openweathermap.org/img/wn/01d@2x.png';
 
 
 
-    let geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + userCity + '&limit=1&appid=1676eb10cf8e7b54d30c52535ce74dbd'
+    let geoUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + userCity + '&limit=1&appid=1676eb10cf8e7b54d30c52535ce74dbd'
 
     function addForecast(forecast) {
         let grandparentdiv = $('#grandparentForForecast')
@@ -87,7 +87,7 @@ let weatherIconURL = 'https://openweathermap.org/img/wn/01d@2x.png';
     }
 
     function fetchWeatherData(city) {
-        let geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=1676eb10cf8e7b54d30c52535ce74dbd'
+        let geoUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=1676eb10cf8e7b54d30c52535ce74dbd'
 
         fetch(geoUrl)
         .then(function (response) {
